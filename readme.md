@@ -1,4 +1,4 @@
-# easy-email-template
+# easy_date_conversion
     This libary is help people add and subract values from
     dates.  This libary also helps with conversion from
     different timezones, epoc time ( numerical time ).
