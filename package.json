@@ -1,14 +1,24 @@
 {
   "name": "easy_date_conversion",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Provides easy and quick date configurations",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "jsdoc": "jsdoc -c jsdoc.json"
   },
+  "bugs": {
+    "url": "https://github.com/David-Billingsley/Easy_Date_Conversion/issues"
+  },
+  "homepage": "https://github.com/David-Billingsley/Easy_Date_Conversion",
   "keywords": [
-    "easy-date-conversion"
+    "easy-date-conversion",
+    "date modificaiton",
+    "epoc-conversion"
   ],
   "author": "David Billingsley",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jsdoc": "^4.0.3"
+  }
 }
