@@ -1,0 +1,14 @@
+{
+  "name": "easy_date_conversion",
+  "version": "0.0.1",
+  "description": "Provides easy and quick date configurations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "easy-date-conversion"
+  ],
+  "author": "David Billingsley",
+  "license": "MIT"
+}
