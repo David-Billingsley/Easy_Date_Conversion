@@ -4,9 +4,10 @@
  * @version 0.0.1
  */
 
-import addDaysToDate from './src/Days/dayadd'
-import removeDaysFromDate from './src/Days/dayremove'
-import epocMilliConversion from './src/epocToDate/epocMilli'
+const {addDaysToDate} = require('./src/Date_Mode/Days/dayadd.js')
+const {removeDaysFromDate} = require('./src/Date_Mode/Days/dayremove.js')
+const {addMonthsToDate} = require( "./src/Date_Mode/Months/monthadd.js");
+const {removeMonthsFromDate} = require( "./src/Date_Mode/Months/monthremove.js");
 
 /**
  * Takes the date provided by the user and applies the addition of days
@@ -14,8 +15,8 @@ import epocMilliConversion from './src/epocToDate/epocMilli'
  * @param {int} numberOfDays - The amount of days that you would like to increase the date by
  * @returns {Date} newDate - The new date from the calculation
  */
-const dayAdd = async (date, numberOfDays) => {
-    const newDate = await addDaysToDate(date, numberOfDays)
+const dayAdd =  (date, numberOfDays) => {
+    const newDate =  addDaysToDate(date, numberOfDays)
     return newDate
 }
 
@@ -25,15 +26,34 @@ const dayAdd = async (date, numberOfDays) => {
  * @param {int} numberOfDays - The amount of days that you would like to decrease the date by
  * @returns {Date} newDate - The new date from the calculation
  */
-const dayMinus = async (date, numberOfDays) => {
-    const newDate = await removeDaysFromDate(date, numberOfDays)
+const dayMinus =  (date, numberOfDays) => {
+    const newDate =  removeDaysFromDate(date, numberOfDays)
     return newDate
 }
 
-// const epocMilli = async(date, dateoptions) => {
-//     const result = await epocMilliConversion(date, dateoptions)
-//
-//     return result
-// }
+/**
+ * Takes the date provided by the user and adds the number of months
+ * @param {Date} date - The Date that the user wants to modify.
+ * @param {int} numberOfMonths - The amount of months that you would like to decrease the date by
+ * @returns {Date} newDate - The new date from the calculation
+ */
+const monthAdd =  (date, numberOfMonths) => {
+    const newDate =  addMonthsToDate(date, numberOfMonths)
+    return newDate
+}
 
-module.exports = {dayAdd, dayMinus, epocMilli}
+/**
+
+/**
+ * Takes the date provided by the user and subtracts it by the number of months
+ * @param {Date} date - The Date that the user wants to modify.
+ * @param {int} numberOfMonths - The amount of months that you would like to decrease the date by
+ * @returns {Date} newDate - The new date from the calculation
+ */
+const monthMinus =  (date, numberOfMonths) => {
+    const newDate =  removeMonthsFromDate(date, numberOfMonths)
+    return newDate
+}
+
+
+module.exports = {dayAdd, dayMinus, monthAdd, monthMinus}

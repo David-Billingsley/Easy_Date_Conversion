@@ -11,9 +11,15 @@
  * @returns {Date} date - The new date from the calculation
  */
 const addDaysToDate = (date, number) => {
-    date.setDate(date.getDate() + number)
+    if(typeof date ==='string') {
+        let datestring = new Date(date)
+        datestring.setDate(datestring.getDate() + number)
 
-    return date
+        return datestring
+    }else{
+        date.setDate(date.getDate() + number)
+        return date
+    }
 }
 
-module.exports = {addDaysToDate}
+module.exports = { addDaysToDate }

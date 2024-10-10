@@ -1,5 +1,5 @@
 /**
- * @file Adds days to the number of days provided
+ * @file Subtract the number of days from the date provided
  * @author David Billingsley
  * @version 0.0.1
  */
@@ -11,9 +11,15 @@
  * @returns {Date} date - The new date from the calculation
  */
 const removeDaysFromDate = (date, number) => {
-    date.setDate(date.getDate() - number)
+    if (typeof date === 'string') {
+        let datestring = new Date(date)
+        datestring.setDate(datestring.getDate() - number)
 
-    return date
+        return datestring
+    }else{
+        date.setDate(date.getDate() - number)
+        return date
+    }
 }
 
 module.exports = {removeDaysFromDate}
