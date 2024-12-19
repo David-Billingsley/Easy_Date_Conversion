@@ -12,14 +12,16 @@
  */
 
 const epocMilliConversion = (datenumber, options) => {
-    const datestring = new Date(parseInt(datenumber))
-    const formatedDate = new Intl.DateTimeFormat("en-US", {
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit"
-    }).format(datestring);
+    if (options.length === 0) {
+        const datestring = new Date(parseInt(datenumber))
+        const formatedDate = new Intl.DateTimeFormat("en-US", {
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit"
+        }).format(datestring);
 
-    return formatedDate
+        return formatedDate
+    }
 }
 
 module.exports = {epocMilliConversion}
