@@ -1,6 +1,6 @@
 {
   "name": "easy_date_conversion",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Provides easy and quick date configurations",
   "main": "index.js",
   "scripts": {
@@ -13,8 +13,8 @@
   "homepage": "https://github.com/David-Billingsley/Easy_Date_Conversion",
   "keywords": [
     "easy-date-conversion",
-    "date modificaiton",
-    "epoc-conversion"
+    "date modification",
+    "epoch-conversion"
   ],
   "author": "David Billingsley",
   "license": "MIT",
